@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1065586013369",
+    "firebase_url": "https://driver-730d7.firebaseio.com",
+    "project_id": "driver-730d7",
+    "storage_bucket": "driver-730d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065586013369:android:c47f8728efe539b8a99768",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065586013369-vucj5pq1kvmrgqhjhbbct5ighvkc5677.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.login",
+            "certificate_hash": "e6ee5b14ea8ba367782ffceab2f81acf04ebc731"
+          }
+        },
+        {
+          "client_id": "1065586013369-h583evhbaepigrde5gcu3o83mdgvnm85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI9Evm00s-yyCAm5OMDuwD4Npxm60xZ8w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065586013369-h583evhbaepigrde5gcu3o83mdgvnm85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
