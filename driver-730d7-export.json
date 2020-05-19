@@ -1,0 +1,40 @@
+{
+  "Capacitacion" : {
+    "Licencia" : 2222,
+    "RFC" : 5555,
+    "TarjetaCirculacion" : 3333,
+    "id_capacitacion" : 1515,
+    "identificacion" : 123456789
+  },
+  "Estadisticas" : {
+    "Conductor" : "id_conductor",
+    "Fecha" : "date",
+    "Final_Viaje" : "CalleF",
+    "Pago" : "CantidadDinero",
+    "Punto_de_Partida" : "CalleI",
+    "id_viaje" : 1
+  },
+  "registro" : {
+    "Correo" : "jav@hotmail.com",
+    "Lugar_de_trabajo" : "san luis potosi",
+    "NumeroTelefonico" : 44317456,
+    "id_registro" : 10
+  },
+  "usuario_driver" : {
+    "ApellidoMaterno" : "Perez",
+    "ApellidoPaterno" : "Gonzalez",
+    "InfContacto" : "--",
+    "InfLegal" : "--",
+    "Nombre" : "Julio",
+    "Password" : 12324,
+    "id_usuarioDriver" : 1001
+  },
+  "viaje" : {
+    "Pago" : "$50",
+    "PuntoFinal" : "Ubicacion2",
+    "PuntoPartida" : "Ubicacion1",
+    "id_cliente" : 1001,
+    "id_conductor" : 10,
+    "id_estadistica_viaje" : 1
+  }
+}
