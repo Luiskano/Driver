@@ -7,8 +7,16 @@
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true" />
+
     <EditText
-        android:id="@+id/User"
+        android:id="@+id/correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -17,7 +25,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/Passw"
+        android:id="@+id/contrasenia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -26,13 +34,13 @@
         android:inputType="textPassword" />
 
     <Button
-        android:onClick="loging"
+        android:onClick="login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@color/colorPrimary"
         android:textColor="@android:color/white"
-        android:text="Aceptar" />
+        android:text="Iniciar Sesion" />
 
     <TextView
         android:onClick="forgotPassword"
@@ -40,5 +48,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="¿Olvidaste tu contraseña?" />
+
+    <TextView
+        android:onClick="register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Registrarse"
+        android:visibility="gone" />
 
 </LinearLayout>

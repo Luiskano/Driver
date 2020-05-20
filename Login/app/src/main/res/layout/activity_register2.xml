@@ -15,48 +15,113 @@
         android:layout_height="wrap_content"
         android:visibility="gone"/>
 
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"/>
-
-    <EditText
-        android:id="@+id/surname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Apellido"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:inputType="textPersonName"/>
-
-    <EditText
-        android:id="@+id/correo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Correo"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Contraseña"
-        android:layout_margin="10dp"
-        android:ems="10"
-        android:inputType="textPassword" />
-
-    <Button
-        android:onClick="register"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crear Cuenta"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimary"
-        android:textColor="@android:color/white" />
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/apellidoPaterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Apellido Paterno"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/apellidoMaterno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Apellido Materno"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/correo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/contrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Telefono"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/identificacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Numeros de idenficacion oficial"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/RFC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="RFC"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/licencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Folio de licencia"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/circulacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Tarjeta de circulacion"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+            <Button
+                android:onClick="register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crear Cuenta"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

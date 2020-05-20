@@ -12,13 +12,20 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_register2.*
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var name:EditText
-    private lateinit var surname:EditText
+    private lateinit var nombre:EditText
+    private lateinit var apellidoPaterno:EditText
+    private lateinit var apellidoMaterno:EditText
+    private lateinit var contrasenia:EditText
     private lateinit var correo:EditText
-    private lateinit var pass:EditText
+    private lateinit var telefono:EditText
+    private lateinit var identificacion:EditText
+    private lateinit var RFC:EditText
+    private lateinit var licencia:EditText
+    private lateinit var circulacion:EditText
     private lateinit var progressBar: ProgressBar
     private lateinit var dbReference:DatabaseReference
     private lateinit var database:FirebaseDatabase
@@ -28,14 +35,20 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register2)
-        name = findViewById(R.id.name)
-        surname = findViewById(R.id.surname)
+        nombre = findViewById(R.id.nombre)
+        apellidoPaterno = findViewById(R.id.apellidoPaterno)
+        apellidoMaterno = findViewById(R.id.apellidoMaterno)
         correo = findViewById(R.id.correo)
-        pass = findViewById(R.id.pass)
+        contrasenia = findViewById(R.id.contrasenia)
+        telefono = findViewById(R.id.telefono)
+        RFC = findViewById(R.id.RFC)
+        identificacion = findViewById(R.id.identificacion)
+        licencia = findViewById(R.id.licencia)
+        circulacion = findViewById(R.id.circulacion)
         progressBar = findViewById(R.id.progressBar)
         database = FirebaseDatabase.getInstance()
         auth = FirebaseAuth.getInstance()
-        dbReference = database.reference.child("User")
+        dbReference = database.reference.child("Informacion del conductor")
 
     }
 
@@ -44,14 +57,22 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun createNewAccount(){
-        val name:String=name.text.toString()
-        val surname:String=surname.text.toString()
+        val nombre:String=nombre.text.toString()
+        val apellidoPaterno:String=apellidoPaterno.text.toString()
+        val apellidoMaterno:String=apellidoMaterno.text.toString()
         val correo:String=correo.text.toString()
-        val pass:String=pass.text.toString()
+        val contrasenia:String=contrasenia.text.toString()
+        val telefono:String=telefono.text.toString()
+        val RFC:String=RFC.text.toString()
+        val identificacion:String=identificacion.text.toString()
+        val licencia:String=licencia.text.toString()
+        val circulacion:String=circulacion.text.toString()
 
-        if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(surname) && !TextUtils.isEmpty(correo) && !TextUtils.isEmpty(pass)){
+        if (!TextUtils.isEmpty(nombre) && !TextUtils.isEmpty(apellidoPaterno) && !TextUtils.isEmpty(apellidoMaterno) && !TextUtils.isEmpty(correo) &&
+            !TextUtils.isEmpty(contrasenia) && !TextUtils.isEmpty(telefono) && !TextUtils.isEmpty(RFC) && !TextUtils.isEmpty(identificacion) &&
+            !TextUtils.isEmpty(licencia) && !TextUtils.isEmpty(circulacion)){
             progressBar.visibility = View.VISIBLE
-            auth.createUserWithEmailAndPassword(correo,pass)
+            auth.createUserWithEmailAndPassword(correo,contrasenia)
                 .addOnCompleteListener(this){
                     task ->
 
@@ -60,8 +81,17 @@ class RegisterActivity : AppCompatActivity() {
                         verifyEmail(user)
                         val userBD = dbReference.child(user?.uid.toString())
 
-                        userBD.child("name").setValue(name)
-                        userBD.child("surname").setValue(surname)
+                        userBD.child("Nombre").setValue(nombre)
+                        userBD.child("Apellido Paterno").setValue(apellidoPaterno)
+                        userBD.child("Apellido Materno").setValue(apellidoMaterno)
+                        userBD.child("Correo").setValue(correo)
+                        userBD.child("Contraseña").setValue(contrasenia)
+                        userBD.child("Telefono").setValue(telefono)
+                        userBD.child("RFC").setValue(RFC)
+                        userBD.child("Identificacion").setValue(identificacion)
+                        userBD.child("Licencia").setValue(licencia)
+                        userBD.child("Circulacion").setValue(circulacion)
+
                         action()
                     }
                 }

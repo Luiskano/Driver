@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".infPersonal"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:indeterminate="true"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/identificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Numeros de idenficacion oficial"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/RFC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="RFC"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/licencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Folio de licencia"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/circulacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tarjeta de circulacion"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:onClick="register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Cuenta"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
