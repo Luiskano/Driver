@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/bienvenida"
+        android:layout_width="415dp"
+        android:layout_height="65dp"
+        android:gravity="center_horizontal"
+        android:text="Bienvenido"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36sp"
+        android:textStyle="bold|italic" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:text="Bienvenido a driver"
-            android:textAlignment="center"
-            android:layout_gravity="center_horizontal"
-            android:textColor="@android:color/white"
-            android:textSize="12pt"
-            android:background="@android:color/holo_blue_bright"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-    </ScrollView>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="408dp"
+        android:layout_height="80dp"
+        android:text="TextView"
+        android:textColor="#DD0101"
+        android:textSize="18sp"
+        tools:text="Por favor ingresa tu cuenta para continuar con el proceso en dado caso que seas nuevo registrate para darte el acceso nuevo a esta empesa" />
 
     <Button
-        android:onClick="JobMap"
+        android:id="@+id/button5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ubicarme"  />
+        android:onClick="LoginActivity"
+        android:text="Ingresar" />
 
+    <Button
+        android:onClick="RegisterActivity"
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrarse"
+        tools:ignore="MissingConstraints" />
 </LinearLayout>

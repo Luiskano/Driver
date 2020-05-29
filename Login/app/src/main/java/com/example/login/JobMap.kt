@@ -23,18 +23,17 @@ class JobMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickL
     companion object{
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1;
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_map)
-
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.Map) as SupportMapFragment
+            .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-
     }
-
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
@@ -52,7 +51,7 @@ class JobMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickL
 
         mMap.isMyLocationEnabled = true
 
-        fusedLocationClient.lastLocation.addOnSuccessListener(this){location ->
+        fusedLocationClient.lastLocation.addOnSuccessListener(this){ location ->
 
             if (location != null){
                 lastLocation = location
@@ -65,3 +64,5 @@ class JobMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarkerClickL
 
     override fun onMarkerClick(p0: Marker?) = false
 }
+
+

@@ -10,10 +10,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
 
-    fun JobMap(view: View){
-        startActivity(Intent(this, JobMap::class.java))
+    fun LoginActivity(view: View){
+        startActivity(Intent(this, LoginActivity::class.java))
+    }
+
+    fun RegisterActivity(view: View){
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 }

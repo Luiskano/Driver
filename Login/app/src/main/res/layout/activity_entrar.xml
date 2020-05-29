@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Entrar">
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="JobMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver el mapa" />
+
+    <Button
+        android:onClick="informacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informacion de la cuenta" />
+
+
+    <Button
+        android:onClick="Evaluacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Evaluacion al cliente" />
+
+    <Button
+        android:id="@+id/salirA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Desconectar" />
+
+</LinearLayout>

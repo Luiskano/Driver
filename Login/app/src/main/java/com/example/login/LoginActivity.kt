@@ -58,6 +58,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun action(){
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, Entrar::class.java))
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Evaluacion">
+
+    <RatingBar
+        android:id="@+id/rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:rating="4.5"
+        android:stepSize="0.25" />
+
+    <Button
+        android:onClick="evaluarRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@+id/rb"
+        android:id="@id/button"
+        android:text="Evaluar"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
